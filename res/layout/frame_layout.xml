@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--帧布局-->
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:background="#123456"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:text="第一个页面"
+        android:id="@+id/textView1"
+        android:layout_gravity="center"/>
+    <TextView
+        android:background="#234567"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:text="第二个页面"
+        android:id="@+id/textView2"
+        android:layout_gravity="center" />
+    <TextView
+        android:background="#345678"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:text="第三个页面"
+        android:id="@+id/textView3"
+        android:layout_gravity="center" />
+    <TextView
+        android:background="#ffffff"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:text="第四个页面"
+        android:id="@+id/textView4"
+        android:layout_gravity="center" />
+
+    <ProgressBar
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        style="?android:attr/progressBarStyleLarge"
+        android:id="@+id/progressBar1"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="80%"
+        android:id="@+id/textView"
+        android:layout_gravity="center" />
+
+</FrameLayout>
+
+<!--
+gravity指组件相对与父控件的显示位置
+layout_gravity指控件内的组件显示位置
+-->

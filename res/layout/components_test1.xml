@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="显示结果"
+        android:id="@+id/showView"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="篮球"
+        android:id="@+id/habits1" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="足球"
+        android:id="@+id/habits2" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="羽毛球"
+        android:id="@+id/habits3" />
+    </LinearLayout>
+
+
+    <RadioGroup
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup1">
+        <RadioButton
+        android:id="@+id/radio1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:checked="true"
+        android:text="男"
+        />
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="女"
+            />
+    </RadioGroup>
+    <RadioGroup
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup2">
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:checked="true"
+            android:text="黑"
+            />
+        <RadioButton
+            android:id="@+id/radio4"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="白"
+            />
+    </RadioGroup>
+
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="1">
+        <!--
+        gravity指控件内的组件显示位置
+        layout_gravity指组件相对于父控件的显示位置
+        -->
+       <!--Button宽度的计算公式：
+        Button's width + Button's weight * 200 / weightSum
+        故要使Button宽度占据布局的一半，将width设为0，通过weight决定Button最后的宽度
+        -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="button"
+            android:layout_weight="0.5"
+            />
+        </LinearLayout>
+</LinearLayout>

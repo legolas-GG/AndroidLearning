@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <!--子类控件在RelativeLayout中常用到的属性
+    android:layout_alignParentLeft="true" 子类控件相对当前父类容器靠左边
+    android:layout_alignParentTop="true" 子类控件相对父类容器靠上边
+    android:layout_marginLeft="41dp" 子类控件距离父类容器左边的位置
+    android:layout_marginTop="31" 子类控件距离父类容器上边的位置
+    android:layout_centerInParent="true" 子类控件相对父类容器既水平又垂直居中
+    android:layout_centerHorizontal="true" 子类控件相对于父类容器水平居中
+    android:layout_centerVertical="true" 子类控件相对于父类容器垂直居中
+    -->
+    <!--子类控件相对子类控件的一个位置
+    android:layout_below="@+id/button1" 该控件位于给定id控件的底部
+    android:layout_toRightOf="@+id/button" 该控件位于给定id控件的右边
+    android:layout_above="@+id/button1" 该控件位于给定id控件的上面
+    android:layout_toLeftOf="@+id/button1" 该控件位于给定控件的左边
+    android:layout_alignBaseline="@+id/button1" 该控件的内容与给定id控件的内容在一条线上
+    android:layout_alignBottom/Left/Right/Top该控件的底部/左/右/顶部边缘与给定ID控件的底部/左/右/顶部边缘对齐
+    -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="24dp"
+        android:src="@android:mipmap/sym_def_app_icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="狗不理包子"
+        android:id="@+id/textView1"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_toRightOf="@+id/imageView3"
+         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20元一个"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/textView1"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="又贵又不好吃"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        />
+</RelativeLayout>

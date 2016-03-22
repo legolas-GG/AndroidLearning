@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名："
+            android:textSize="28sp"
+            android:textColor="#000000"
+            android:id="@+id/textView1"
+            />
+        <EditText
+            android:id="@+id/editText1"
+            android:hint="请输入你的姓名"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <!--内嵌线性布局-->
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@android:mipmap/sym_def_app_icon"
+        android:id="@+id/imagebtn1"
+        android:onClick=""/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_name"
+        android:id="@+id/btn1" />
+    <!--
+    Button有text属性ImageButton没有
+    ImageButton有src属性，Button没有
+    -->
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按钮2"
+        android:id="@+id/btn2"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按钮3"
+        android:id="@+id/btn3"
+        android:layout_gravity="center_horizontal" />
+
+    <ToggleButton
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/togglebtn"
+        android:textOn="开"
+        android:textOff="关"
+        android:checked="true"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/imageView"
+        android:background="#000"
+        android:layout_gravity="center_horizontal" />
+    <!--ToggleButton有两种状态，选中和未选中状态，
+    并且需要为不同状态设置不同显示文本
+    checked="true"设置初始状态为开
+    textOn对应true；textOff对应false；-->
+</LinearLayout>

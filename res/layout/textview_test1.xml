@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/long_textView"
+        android:id="@+id/longTextView"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_gravity="center_horizontal" />
+    <!--singleLine="true"：在一行显示，多余的用…表示
+       + ellipsize="marquee":在一行显示，多余的不显示
+       + focusable="true"&focusableInTouchMode="true"：
+       在一行显示，跑马灯形式(简单地存在一个布局中时可以完美实现，布局稍微复杂便不起作用)
+    -->
+    <com.legolas.androidlearning.MarqueeText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/long_textView"
+        android:id="@+id/myLongTextView"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_gravity="center_horizontal" />
+    <!--在java包中新建一个Marquee类继承TextView类，
+    在Marquee中实现TextView中所有的构造函数，然后调用
+    Marquee控件，因为系统默认是将focused焦点赋给第一个
+    TextView对象，所以后面对象都拿不到焦点，自然就不能实现跑马灯效果，
+    而在Marquee中重写了Focused方法，对所有对象均返回true，问题得到解决。
+    -->
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#ffffff"
+        />
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/autoTextView"
+        android:hint="单值匹配"
+        android:completionThreshold="2"
+        android:layout_gravity="center_horizontal" />
+    <!--功能：动态输入的内容，可根据内容显示匹配的热门信息，
+    completionThreshold设置输入多少字符时进行匹配
+    -->
+    <MultiAutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/multiAutoTextView"
+        android:hint="多值匹配"
+        android:completionThreshold="2"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:background="@drawable/white_red_bg"
+        android:id="@+id/et_input" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="change color"
+        android:id="@+id/button5"
+        android:padding="5dp"
+        android:background="@drawable/orange_selector"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
